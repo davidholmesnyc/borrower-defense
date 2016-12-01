@@ -113,8 +113,8 @@
 
 				 </div>
 
-				 <div style="display:none">
-				 <label for="input-type-text">Any previous enrollment?</label>
+				 <div ng-show="add_date>0" style="margin-top:20px;">
+				 <label for="input-type-text" style="display:none">Any previous enrollment?</label>
 				 <div class="usa-grid" style="padding:0px">
 				 
 
@@ -144,7 +144,7 @@
 				 </div>
 				 </div>
 				 <p>
-				 	If you had gaps in your enrollment in a program, <a href="javascript:" style="cursor: pointer">add all start and end dates.</a>
+				 	If you had gaps in your enrollment in a program, <a href="javascript:" style="cursor: pointer" ng-click="add_date=1">add all start and end dates.</a>
 				 </p>
 
 				

@@ -238,6 +238,21 @@ button.bd-button-active:hover,[type="button"].bd-button-active:hover{
   background-color: #0071bc;
   color: white;
 }
+.question-box-helper-text{
+  font-size:14px;
+  margin-top:10px;
+  color:grey;
+}
+
+.tooltipdemoBasicUsage md-toolbar .md-toolbar-tools .md-button,
+.tooltipdemoBasicUsage md-toolbar .md-toolbar-tools .md-button:hover {
+  box-shadow: none;
+  border: none;
+  transform: none;
+  -webkit-transform: none; 
+  background:white;
+}
+
 /*
 input, textarea, select {
     -webkit-appearance: none;

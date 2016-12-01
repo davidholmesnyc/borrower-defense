@@ -36,6 +36,7 @@ app.config(function($stateProvider) {
         $scope.myselect.q = "Month"
         $scope.states = states
         $scope.schoolInformation = schoolInformation.info
+        $scope.add_date = 0
         
     },
     templateUrl: 'pages/school-information.html',
