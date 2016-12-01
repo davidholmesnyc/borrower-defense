@@ -1,0 +1,53 @@
+<div >
+	<div class="layout-box" style="margin-top:60px">
+		<div class="usa-grid" style="padding:0px">
+			<div class="usa-width-one-third">
+				<div ng-include="'pages/steps.html'"></div>
+			</div>
+			<div class="usa-width-two-thirds">
+				<div class="page-title" style="margin-top:40px">
+					Section 3: Other Loan Reduction Requests
+				</div>
+				<div class="grey-line"></div>
+				<p class="info"> 
+					Have you asked for loan reductions through other methods? Examples may include submitting a Closed School Discharge claim, applying for a tuition recovery program. or participating in a lawsuit.
+				</p>
+
+	    		
+	    		<ul class="h-radio-buttons">
+		    		<li>
+		    		    <input id="stanton" type="radio"  ng-model="checkbox" name="historical-figures-2" value="yes" >
+		    		    <label for="stanton">Yes</label>
+		    		  </li>
+		    		  <li >
+		    		    <input id="anthony" type="radio" ng-model="checkbox" name="historical-figures-2" value="no" >
+		    		    <label for="anthony" >No</label>
+		    		  </li>
+				</ul>
+				
+				<div class="arrow_box" ng-show="checkbox == 'yes'">
+					
+				  <label for="input-type-textarea" class="reset">Please describe the other request(s), including the amount of any payment or loan relief that you received, and provid any documentation about the requests, if available:</label>
+				  <textarea id="input-type-textarea" name="input-type-textarea"></textarea>
+				</div>
+
+			
+	  		    <div class="layout-box" style="margin-top:20px;">
+	  		    <div class="usa-grid reset" style="padding:0px;max-width:200px">
+	  		    	<div class="usa-width-one-half">
+						<a href="javascript:window.history.back()" class="previous">Previous</a>
+					</div>
+	  		    	<div class="usa-width-one-half">
+	  		    		<a href="#!/basis-for-borrower-defense">
+							<button class="usa-button-gray">Continue</button>
+						</a>
+					</div>
+				</div>
+				</div>
+				<p>
+				* Continue after entering all required information
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

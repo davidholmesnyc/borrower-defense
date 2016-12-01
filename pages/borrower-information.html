@@ -1,0 +1,148 @@
+<div ng-controller="BorrowerInformationController">
+	<div class="layout-box" style="margin-top:60px">
+		<div class="usa-grid" style="padding:0px">
+			<div class="usa-width-one-third">
+				<div ng-include="'pages/steps.html'"></div>
+			</div>
+			<div class="usa-width-two-thirds">
+				<div class="page-title" style="margin-top:40px">
+					Borrower Information
+				</div>
+				<div class="grey-line"></div>
+				<p class="info"> 
+					If you have an FSA ID we can gather your personal information from your account
+				</p>
+				<button class="usa-button-outline" type="button">Sign In</button>
+
+				<div class="page-title" style="margin-top:40px">
+					Continue without Signing In
+				</div>
+				<div class="grey-line"></div>
+				<p class="info"> 
+					Please enter your contact information below.
+					<br/>
+					All fields are required unless otherwise specified.
+				</p>
+
+				<label for="input-type-text">First Name</label>
+				<input id="input-type-text" name="input-type-text" type="text">
+
+				<label for="input-type-text">Middle Name</label>
+				<input id="input-type-text" name="input-type-text" type="text">
+
+				<label for="input-type-text">Last name</label>
+				<input id="input-type-text" name="input-type-text" type="text">
+				
+
+				<fieldset>
+				  <label for="input-type-text">Date of Birth</label>
+				  <div class="usa-grid" style="padding:0px">
+				  
+
+				  	<div class="usa-width-one-third">
+				  		<select ng-model="month" ng-options="month as month for month in months" placeholder="Month">
+				  			<option style="display:none" value="">Month</option>
+				  		</select>
+				  	</div>
+
+				  	<div class="usa-width-one-third">
+				  		
+				  		<input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_2" name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="" placeholder="day">
+				  	</div>
+
+				  	<div class="usa-width-one-third">
+					  	
+					  	<input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_3" name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="" placeholder="year">
+				  	</div>
+
+				  </div>
+
+				</fieldset>
+				<fieldset>
+				<label for="input-type-text">Social Security Number</label>
+				<div class="usa-date-of-birth">
+				  <div class="usa-form-group usa-form-group-month">
+				    <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="" placeholder="XXX">
+				  </div>
+				  <div class="usa-form-group usa-form-group-day">
+				    <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_2" name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="" placeholder="XXX">
+				  </div>
+				  <div class="usa-form-group usa-form-group-year">
+				    <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_3" name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="" placeholder="XXX">
+				  </div>
+				</div>
+				</fieldset>
+				<fieldset>
+				<label for="input-type-text">Telephone Number</label>
+				<div class="usa-date-of-birth">
+				  <div class="usa-form-group usa-form-group-month">
+				    <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="" placeholder="XXX">
+				  </div>
+				  <div class="usa-form-group usa-form-group-day">
+				    <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_2" name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="" placeholder="XXX" >
+				  </div>
+				  <div class="usa-form-group usa-form-group-year">
+				    <input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_3" name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="" placeholder="XXX">
+				  </div>
+				</div>
+				</fieldset>
+
+				<label for="input-type-text">Street Address Line 1</label>
+				<input id="input-type-text" name="input-type-text" type="text">
+				
+
+				<label for="input-type-text">Street Address Line 2</label>
+				<input id="input-type-text" name="input-type-text" type="text">
+				
+				<div class="usa-grid" style="padding:0px;margin-top:20px;">
+				<div class="usa-width-one-third" >
+					<label for="input-type-text">City</label>
+					<input id="input-type-text" name="input-type-text" type="text">
+				</div>
+				
+				<div class="usa-width-one-third">
+					
+					    <label for="options">State</label>
+					    <select name="options" id="options">
+					      <option value="value1">NY</option>
+					      <option value="value2">VA</option>
+					      <option value="value3">MD</option>
+					    </select>
+					  
+				</div>
+									
+				<div class="usa-width-one-third">
+					<label for="input-type-text">Zip</label>
+					<input id="input-type-text" name="input-type-text" type="text">
+				</div>
+					
+				</div>
+				
+				
+				<label for="input-type-text">Are you a PARENT who took out a federal loan on behalf of the student?</label>
+				<br/>
+				<fieldset class="usa-fieldset-inputs usa-sans">
+				    		
+				    		<ul class="h-radio-buttons">
+					    		<li>
+					    		    <input id="stanton" type="radio"  ng-model="checkbox" name="historical-figures-2" value="yes" >
+					    		    <label for="stanton">Yes</label>
+					    		  </li>
+					    		  <li >
+					    		    <input id="anthony" type="radio" ng-model="checkbox" name="historical-figures-2" value="no" >
+					    		    <label for="anthony" >No</label>
+					    		  </li>
+							</ul>
+
+				</fieldset>
+				<br/>
+				<a href="#!/school-information">
+					<button class="usa-button-gray">Continue</button>
+				</a>
+				<p>
+				* Continue after entering all required information
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

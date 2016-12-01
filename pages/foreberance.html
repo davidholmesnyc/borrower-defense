@@ -1,0 +1,49 @@
+<div ng-controller="BorrowerInformationController">
+	<div class="layout-box" style="margin-top:60px">
+		<div class="usa-grid" style="padding:0px">
+			<div class="usa-width-one-third">
+				<div ng-include="'pages/steps.html'"></div>
+			</div>
+			<div class="usa-width-two-thirds">
+				<div class="page-title" style="margin-top:40px">
+					Section 6: No Payments while Under Review
+				</div>
+				<div class="grey-line"></div>
+				<p class="info"> 
+					By submitting this application, you may request to have all your federal loans placed into forbearance and to stop collections on any federal loans currently in default.
+				</p>
+				<p class="info">
+					Please note that interest will continue to accumulate on these loans and will be added to the amount you still owe. If your application is denied or partially approved, the amount you owe may be higher.
+				</p>
+				<p class="info">
+					You do not have to place your loans in Forbearance or Stopped collections to apply for borrower defense relief. Please read the question and answers section carefully.
+				</p>
+
+				<label for="stanton"><strong>Do you want your loans to be placed into forbearance and/or stopped collections?</strong></label>
+
+				<button class="usa-button-outline" type="button" ng-class='{"bd-button-active":tog==1}' ng-click='tog=1'>Yes</button>
+
+				<button class="usa-button-outline" type="button" ng-class='{"bd-button-active":tog==2}' ng-click='tog=2'>No</button>
+				<p class="info">
+					I want all my federal loans to be placed in forbearance and for collections to stop on any loans in default while my borrower defense application is reviewed. During this time period, I understand that interest will continue to accrue. 
+				</p>
+
+	  		    <div class="layout-box" style="margin-top:20px;">
+	  		    <div class="usa-grid reset" style="padding:0px;max-width:200px">
+	  		    	<div class="usa-width-one-half">
+						<a href="javascript:window.history.back()" class="previous">Previous</a>
+					</div>
+	  		    	<div class="usa-width-one-half">
+	  		    		<a href="#!/review-and-sign">
+							<button class="usa-button-gray">Continue</button>
+						</a>
+					</div>
+				</div>
+				</div>
+				<p>
+				* Continue after entering all required information
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

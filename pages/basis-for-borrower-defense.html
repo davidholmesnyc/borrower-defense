@@ -1,0 +1,281 @@
+<div ng-controller="BorrowerInformationController">
+	<div class="layout-box" style="margin-top:60px">
+		<div class="usa-grid" style="padding:0px">
+			<div class="usa-width-one-third">
+				<div ng-include="'pages/steps.html'"></div>
+			</div>
+			<div class="usa-width-two-thirds">
+				<div class="page-title" style="margin-top:40px">
+					Section 4: Basis for Borrower Defense 
+				</div>
+				<div class="grey-line"></div>
+				<p class="info"> 
+					Please note that you only need to provide information for the sections below that apply to you, but you must complete at least one section.
+				</p>
+
+				<label for="input-type-text"><strong>Did the school mislead you (or fail to tell you important information) about any of the following:</strong></label>
+				<style>
+				.arrow{
+					width:20px;
+					margin-right:20px;
+					display:none;
+				}
+				</style>
+				
+				<!-- question box -->
+				<div class="grid-list-box">
+				   <div class="usa-grid reset " style="padding:0px;margin-top:20px;">
+				      <div class="usa-width-one-half">
+				      <img src="img/arrow-right.svg" class="arrow" >
+				         <span class="question-box-text">Promises of future employment </span>
+				         <div style="display:none" class="question-box-helper-text">
+				            Likelihood of finding a job, how many students graduate, and/or earnings after graduation?
+				         </div>
+				      </div>
+				      <div class="usa-width-one-half">
+				         <div id="navcontainer">
+				            <ul class="h-radio-buttons">
+				            <li>
+				               <input id="basis.future_employment" type="radio" ng-model="basis.future_employment" name="basis.future_employment" value="yes">
+				               <label for="basis.future_employment">Yes</label>
+				            </li>
+				            <li>
+				               <input id="basis.future_employment" type="radio" ng-model="basis.future_employment" name="basis.future_employment" value="no">
+				               <label for="basis.future_employment">No</label>
+				            </li>
+
+				            </li>
+				         </div>
+				      </div>
+				   </div>
+				   <div class="arrow_box" ng-show="basis.future_employment == 'yes'">
+				   		<div  ng-repeat="pass in [{'text':'basis.future_employment'}]" ng-include="'pages/basis-for-borrower-defense-questions.html'"></div>
+				   </div>
+				</div>
+				<!-- end of question box -->
+
+				
+				<!-- question box -->
+				<div class="grid-list-box">
+				   <div class="usa-grid reset " style="padding:0px;margin-top:20px;">
+				      <div class="usa-width-one-half">
+				      <img src="img/arrow-right.svg" class="arrow" >
+				         <span class="question-box-text">Credits Transferring</span>
+				         <div style="display:none" class="question-box-helper-text">
+				            Likelihood of finding a job, how many students graduate, and/or earnings after graduation?
+				         </div>
+				      </div>
+				      <div class="usa-width-one-half">
+				         <div id="navcontainer">
+				            <ul class="h-radio-buttons">
+				            <li>
+				               <input id="basis.credits" type="radio" ng-model="basis.credits" name="basis.credits" value="yes">
+				               <label for="basis.credits">Yes</label>
+				            </li>
+				            <li>
+				               <input id="basis.credits" type="radio" ng-model="basis.credits" name="basis.credits" value="no">
+				               <label for="basis.credits">No</label>
+				            </li>
+
+				            </li>
+				         </div>
+				      </div>
+				   </div>
+				   <div class="arrow_box" ng-show="basis.credits == 'yes'">
+				   		<div ng-repeat="pass in [{'text':'basis.credits'}]"  ng-include="'pages/basis-for-borrower-defense-questions.html'"></div>
+				   </div>
+				</div>
+				<!-- end of question box -->
+
+				
+				<!-- question box -->
+				<div class="grid-list-box">
+				   <div class="usa-grid reset " style="padding:0px;margin-top:20px;">
+				      <div class="usa-width-one-half">
+				      <img src="img/arrow-right.svg" class="arrow" >
+				         <span class="question-box-text">How much your classes would cost</span>
+				         <div style="display:none" class="question-box-helper-text">
+				            Likelihood of finding a job, how many students graduate, and/or earnings after graduation?
+				         </div>
+				      </div>
+				      <div class="usa-width-one-half">
+				         <div id="navcontainer">
+				            <ul class="h-radio-buttons">
+				            <li>
+				               <input id="basis.cost" type="radio" ng-model="basis.cost" name="basis.cost" value="yes">
+				               <label for="basis.cost">Yes</label>
+				            </li>
+				            <li>
+				               <input id="basis.cost" type="radio" ng-model="basis.cost" name="basis.cost" value="no">
+				               <label for="basis.cost">No</label>
+				            </li>
+
+				            </ul>
+				         </div>
+				      </div>
+				   </div>
+				   <div class="arrow_box" ng-show="basis.cost == 'yes'">
+				   		<div ng-repeat="pass in [{'text':'basis.cost'}]" ng-include="'pages/basis-for-borrower-defense-questions.html'"></div>
+				   </div>
+				</div>
+				<!-- end of question box -->
+
+				 				
+				<!-- question box -->
+				<div class="grid-list-box">
+				   <div class="usa-grid reset " style="padding:0px;margin-top:20px;">
+				      <div class="usa-width-one-half">
+				      <img src="img/arrow-right.svg" class="arrow" >
+				         <span class="question-box-text">The availability or quality of job or career services assistance?</span>
+				         <div style="display:none" class="question-box-helper-text">
+				            Likelihood of finding a job, how many students graduate, and/or earnings after graduation?
+				         </div>
+				      </div>
+				      <div class="usa-width-one-half">
+				         <div id="navcontainer">
+				            <ul class="h-radio-buttons">
+				            <li>
+				               <input id="basis.jobs" type="radio" ng-model="basis.jobs" name="basis.jobs" value="yes">
+				               <label for="basis.jobs">Yes</label>
+				            </li>
+				            <li>
+				               <input id="basis.jobs" type="radio" ng-model="basis.jobs" name="basis.jobs" value="no">
+				               <label for="basis.jobs">No</label>
+				            </li>
+
+				            </ul>
+				         </div>
+				      </div>
+				   </div>
+
+				   <div class="arrow_box" ng-show="basis.jobs == 'yes'">
+				   			<div ng-repeat="pass in [{'text':'basis.jobs'}]" ng-include="'pages/basis-for-borrower-defense-questions.html'"></div>
+
+				   </div>
+				</div>
+				<!-- end of question box -->
+
+			
+				<!-- question box -->
+				<div class="grid-list-box">
+				   <div class="usa-grid reset " style="padding:0px;margin-top:20px;">
+				      <div class="usa-width-one-half">
+				      <img src="img/arrow-right.svg" class="arrow" >
+				         <span class="question-box-text">Educational Services</span>
+				         <div style="display:none" class="question-box-helper-text">
+				            Likelihood of finding a job, how many students graduate, and/or earnings after graduation?
+				         </div>
+				      </div>
+				      <div class="usa-width-one-half">
+				         <div id="navcontainer">
+				            <ul class="h-radio-buttons">
+				            <li>
+				               <input id="basis.services" type="radio" ng-model="basis.services" name="basis.services" value="yes">
+				               <label for="basis.services">Yes</label>
+				            </li>
+				            <li>
+				               <input id="basis.services" type="radio" ng-model="basis.services" name="basis.services" value="no">
+				               <label for="basis.services">No</label>
+				            </li>
+
+				            </li>
+				         </div>
+				      </div>
+				   </div>
+				   <div class="arrow_box" ng-show="basis.services == 'yes'">
+				   		<div ng-repeat="pass in [{'text':'basis.services'}]" ng-include="'pages/basis-for-borrower-defense-questions.html'"></div>
+				   </div>
+				</div>
+				<!-- end of question box -->
+
+		 				
+				<!-- question box -->
+				<div class="grid-list-box">
+				   <div class="usa-grid reset " style="padding:0px;margin-top:20px;">
+				      <div class="usa-width-one-half">
+				      <img src="img/arrow-right.svg" class="arrow" >
+				         <span class="question-box-text">The consequences of failure to enroll</span>
+				         <div style="display:none" class="question-box-helper-text">
+				            Likelihood of finding a job, how many students graduate, and/or earnings after graduation?
+				         </div>
+				      </div>
+				      <div class="usa-width-one-half">
+				         <div id="navcontainer">
+				            <ul class="h-radio-buttons">
+				            <li>
+				               <input id="basis.enroll" type="radio" ng-model="basis.enroll" name="basis.enroll" value="yes">
+				               <label for="basis.enroll">Yes</label>
+				            </li>
+				            <li>
+				               <input id="basis.enroll" type="radio" ng-model="basis.enroll" name="basis.enroll" value="no">
+				               <label for="basis.enroll">No</label>
+				            </li>
+
+				            </li>
+				         </div>
+				      </div>
+				   </div>
+				   <div class="arrow_box" ng-show="basis.enroll == 'yes'">
+				   		<div ng-repeat="pass in [{'text':'basis.enroll'}]" ng-include="'pages/basis-for-borrower-defense-questions.html'"></div>
+				   </div>
+				</div>
+				<!-- end of question box -->
+
+					<label for="input-type-text"><strong>Do you have any other reasons relating to your school that you believe qualify you for borrower defense?</strong></label>
+								
+					<!-- question box -->
+					<div class="grid-list-box">
+					   <div class="usa-grid reset " style="padding:0px;margin-top:20px;">
+					      <div class="usa-width-one-half">
+					      <img src="img/arrow-right.svg" class="arrow" >
+					         <span class="question-box-text">Such as: Your school failing to perform its obligations under its contract with you, there is a judgment against your school in a Federal court, a State court, or in front of an administrative board? Is there some other reason you feel your school misled you?</span>
+					         <div style="display:none" class="question-box-helper-text">
+					            Likelihood of finding a job, how many students graduate, and/or earnings after graduation?
+					         </div>
+					      </div>
+					      <div class="usa-width-one-half">
+					         <div id="navcontainer">
+					            <ul class="h-radio-buttons">
+					            <li>
+					               <input id="basis.other_reasons" type="radio" ng-model="basis.other_reasons" name="basis.other_reasons" value="yes">
+					               <label for="basis.other_reasons">Yes</label>
+					            </li>
+					            <li>
+					               <input id="basis.other_reasons" type="radio" ng-model="basis.other_reasons" name="basis.other_reasons" value="no">
+					               <label for="basis.other_reasons">No</label>
+					            </li>
+
+					            </li>
+					         </div>
+					      </div>
+					   </div>
+					   <div class="arrow_box" ng-show="basis.other_reasons == 'yes'">
+					      <div ng-repeat="pass in [{'text':'basis.other_reasons'}]" ng-include="'pages/basis-for-borrower-defense-questions.html'"></div>
+					   </div>
+					</div>
+					<!-- end of question box -->
+
+
+
+				<p class="info">
+				For more information about the basis for borrower defense relief, see StudentAid.gov/borrower-defense
+				</p>
+	  		    <div class="layout-box" style="margin-top:20px;">
+	  		    <div class="usa-grid reset" style="padding:0px;max-width:200px">
+	  		    	<div class="usa-width-one-half">
+						<a href="javascript:window.history.back()" class="previous">Previous</a>
+					</div>
+	  		    	<div class="usa-width-one-half">
+	  		    		<a href="#!/supported-documents" ng-click="$rootScope.next()">
+							<button class="usa-button-gray">Continue</button>
+						</a>
+					</div>
+				</div>
+				</div>
+				<p>
+				* Continue after entering all required information
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

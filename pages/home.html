@@ -1,0 +1,86 @@
+<div ng-controller="HomeCtrl as ctrl">
+	<div class="banner">
+		<div  class="layout-box">
+			<h2>Application for Borrower Defense To Loan Payment</h2>
+		</div>
+	</div>
+
+	<div class="layout-box">
+		<p class="info">
+			If you enrolled in a college program you feel the school misled you or failed to tell you important information, you may be eligible to have your federal student loan debt reduced or eliminated.
+		</p>
+		<p class=" bold" style="margin-bottom:30px;">
+		 	<strong>Start your claim by entering your school name below:</strong>
+		</p>
+
+		<md-autocomplete
+		    ng-disabled="ctrl.isDisabled"
+		    md-no-cache="ctrl.noCache"
+		    md-selected-item="ctrl.selectedItem"
+		    md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+		    md-search-text="ctrl.searchText"
+		    md-selected-item-change="ctrl.selectedItemChange(item)"
+		    md-items="item in ctrl.querySearch(ctrl.searchText)"
+		    md-item-text="item.display"
+		    md-min-length="0"
+		    placeholder="Type the name of School or Institution" style="width:50%">
+		  <md-item-template>
+		    <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+		  </md-item-template>
+		  <md-not-found>
+		    No colleges matching "{{ctrl.searchText}}" were found. Please type out the name above.
+		  </md-not-found>
+		</md-autocomplete>
+
+		<div class="button_wrapper">
+			<a href="#!/borrower-information">
+			   <button ng-click="nextPage()">Continue</button>
+			</a>
+		</div>
+	</div>
+	<div class="line-border line-margin"></div>
+	<div class="layout-box">
+		<p class="info">
+			The U.S Department of Education is creating a process to make it as easy as possible for borrowers who attended schools that did not meet legal obligations to seek loan forgiveness (discharge) based on borrower defense to repayment. More information about Borrower Defense. 
+		</p>
+		<div class="usa-grid" style="padding:0px">
+			<div class="grey-box usa-width-one-third">
+				Discharge Process 
+			</div>
+			<div class="grey-box usa-width-one-third">
+				Forbearance and Stopped Collections
+			</div>
+			<div class="grey-box usa-width-one-third">
+				Information and Resources for Help
+			</div>
+		</div>
+	</div>
+	<div class="line-border line-margin"></div>
+	<div class="layout-box">
+		<div class="usa-grid help-box" style="padding:0px">
+			<div class="usa-width-two-thirds">
+				<div class="footer-header"> Other Helpful Topics</div>
+				<a href="#">Information about Debt Relief for Corinthian Colleges Students</a>
+				<a href="#">Loan Forgiveness for Corinthian Students Whose Schools Closed on April 27,2015</a>
+				<a href="#">For Corinthian Students Who Believe They Were Victims of Fraud or Other</a>
+				<a href="#">Violations of State Law</a>
+				<a href="#">Forbearance and Stopped Collections</a>
+				<a href="#">Information and Resources for Help</a>
+				<a href="#">Get Your Questions Answered</a>
+			</div>
+			<div class="usa-width-one-third">
+				<div class="footer-header">Need any help?</div>
+				<div>For more information about this process:</div>
+				<a href="#">Discharge Process</a>
+				<a href="#">Forbearance and Stopped Collections</a>
+				<a href="#">Information and Resources for Help</a>
+				<div>If you have questions or comments about your application,please contact</div>
+				<a href="#">FSAOperations@ed.gov</a>
+				<div class="info">
+					For further inormation you can call
+				</div>
+				<a href="#">1-800-349-5005</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,175 @@
+<div>
+
+	<div class="layout-box" style="margin-top:60px">
+		<div class="usa-grid" style="padding:0px">
+			<div class="usa-width-one-third">
+				<div ng-include="'pages/steps.html'"></div>
+			</div>
+			<div class="usa-width-two-thirds">
+				<div class="page-title" style="margin-top:40px">
+					Section 2: School Information
+				</div>
+				<div class="grey-line"></div>
+				<p class="info"> 
+					Next, we need some information about the school in question.
+				</p>
+
+				<label for="input-type-text">School</label>
+				<input id="input-type-text" name="input-type-text" type="text" value="{{schoolInformation.NAME}}">
+
+				<form class="usa-form" style='display:none'>
+				    <label for="options">Campus</label>
+				    <select name="options" id="options">
+				      <option value="value1">NY</option>
+				      <option value="value2">VA</option>
+				      <option value="value3">MD</option>
+				    </select>
+				  </form>
+				  
+				  <div class="usa-grid" style="padding:0px">
+				  	<div class="usa-width-one-third" style="    margin-top: 48px;">
+				  		<label for="input-type-text">City</label>
+				  		<input id="input-type-text" name="input-type-text" type="text" value="{{schoolInformation.CITY}}">
+				  	</div>
+				  	
+				  	<div class="usa-width-two-thirds">
+				  		<form class="usa-form">
+				  		    <label for="options">State</label>
+				  		    <select ng-model="myselect.m" ng-init="test = states[0]" ng-options="month as month for month in states">
+				  		    	<option value="">{{schoolInformation.ST}}</option>
+				  		    </select>
+						</form>
+				  	</div>
+				  </div>
+
+    		     <label for="input-type-text">Current Status at school</label>
+    		    <fieldset class="usa-fieldset-inputs usa-sans" style="margin-top:20px;">
+
+    		     <legend class="usa-sr-only">Current Status at school</legend>
+    		     <ul class="h-radio-buttons">
+  	  		     <li>
+  	  		       <input id="stanton" type="radio" checked name="historical-figures-2" value="stanton">
+  	  		       <label for="stanton">Graduated</label>
+  	  		     </li>
+  	  		     <li>
+  	  		       <input id="anthony" type="radio" name="historical-figures-2" value="anthony">
+  	  		       <label for="anthony">Transferred</label>
+  	  		     </li>
+  	  		     <li>
+  	  		       <input id="tubman" type="radio" name="historical-figures-2" value="tubman">
+  	  		       <label for="tubman">Withdrew</label>
+  	  		     </li>
+  	  		     <li>
+  	  		       <input id="tubman" type="radio" name="historical-figures-2" value="tubman">
+  	  		       <label for="tubman">Attending</label>
+  	  		     </li>
+    		     </ul>
+
+    		    </fieldset>
+
+
+				  <div class="grey-line" style="margin-top:20px;"></div>
+
+				  			 <label for="input-type-text">Program Name or Major</label>
+				  			 <input id="input-type-text" name="input-type-text" type="text">
+				  			 <div>
+				  			<label for="input-type-text">Credential/Degree Sought</label>
+				   		 	<select name="options" id="options">
+				    		      <option value="value1">Select a Degree</option>
+				    		      <option value="value2">Associate</option>
+				    		      <option value="value3">Bachelor</option>
+				    		      <option value="value3">Master</option>
+				    		      <option value="value3">Doctoral</option>
+				    		      <option value="value3">Other</option>
+				    		    </select>
+				    		    </div>
+
+
+				  <label for="input-type-text">Dates of Enrollment</label>
+				 <div class="usa-grid" style="padding:0px">
+				 
+
+				 	<div class="usa-width-one-fourth">
+					 	<select ng-model="myselect.b" ng-options="month as month for month in months">
+					 		<option style="display:none" value="">Month</option>
+					 	</select>
+				 	</div>
+				 	<div class="usa-width-one-fourth" style="margin-right:0px">
+				 	<input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="text" min="1" max="12" value="" placeholder="Year" style="display:inline-block;width:90%">
+				 	- 
+				 	</div>
+
+				 	<div class="usa-width-one-fourth">
+					 	<select ng-model="myselect.h" ng-options="month as month for month in months">
+					 		<option style="display:none" value="">Month</option>
+					 	</select>
+	 		 		    <input id="truth" type="checkbox" name="historical-figures-1" value="truth" >
+	 		 		    <label for="truth" class="reset" style="margin-top:20px;">Still Enrolled?</label>
+				 		 		   
+				 	</div>
+				 	<div class="usa-width-one-fourth">
+				 				 	<input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="text" min="1" max="12" value="" placeholder="Year">
+				 	</div>
+
+				 </div>
+
+				 <div style="display:none">
+				 <label for="input-type-text">Any previous enrollment?</label>
+				 <div class="usa-grid" style="padding:0px">
+				 
+
+				 	<div class="usa-width-one-fourth">
+				 		<select ng-model="myselect.q" ng-options="month as month for month in months" placeholder="Month">
+				 			<option style="display:none" value="">Month</option>
+				 		</select>
+				 	</div>
+				 	<div class="usa-width-one-fourth" style="margin-right:0px">
+				 	<input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="text" min="1" max="12" value="" placeholder="Year" style="display:inline-block;width:90%">
+				 	- 
+				 	</div>
+
+				 	<div class="usa-width-one-fourth">
+
+				 		<select ng-model="myselect.v" ng-options="month as month for month in months">
+				 			<option style="display:none" value="">Month</option>
+				 		</select>
+				 		<input id="truth" type="checkbox" name="historical-figures-1" value="truth" >
+				 		 		  
+				 		 		   
+				 	</div>
+				 	<div class="usa-width-one-fourth">
+				 				 	<input class="usa-input-inline" aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="text" min="1" max="12" value="" placeholder="Year">
+				 	</div>
+
+				 </div>
+				 </div>
+				 <p>
+				 	If you had gaps in your enrollment in a program, <a href="javascript:" style="cursor: pointer">add all start and end dates.</a>
+				 </p>
+
+				
+
+				 <div class="grey-line"></div>
+				 <p>
+				 	If you attended another program at this school,  <a href="javascript:" style="cursor: pointer">please add information or that program</a>
+				 </p>
+	  		  
+	  		    <div class="layout-box" style="margin-top:20px;">
+	  		    <div class="usa-grid reset" style="padding:0px;max-width:200px">
+	  		    	<div class="usa-width-one-half">
+						<a href="javascript:window.history.back()" class="previous">Previous</a>
+					</div>
+	  		    	<div class="usa-width-one-half">
+	  		    		<a href="#!/other-loan-relief">
+							<button class="usa-button-gray">Continue</button>
+						</a>
+					</div>
+				</div>
+				</div>
+				<p>
+				* Continue after entering all required information
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

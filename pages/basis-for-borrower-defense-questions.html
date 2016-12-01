@@ -1,0 +1,34 @@
+
+<label for="input-type-textarea" class="reset">What did the school tell you or fail to tell you</label>
+<textarea id="input-type-textarea" name="input-type-textarea"></textarea>
+
+<label for="input-type-textarea" class="reset">How did the school communicate with you(Brochure, online, over the phone, in person, etc.)</label>
+<textarea id="input-type-textarea" name="input-type-textarea"></textarea>
+
+<label for="input-type-textarea" class="reset">What is the name(s)/title(s) of the people who you believe misled you (if known)?</label>
+<textarea id="input-type-textarea" name="input-type-textarea"></textarea>
+
+<label for="input-type-textarea" class="reset">Why do you believe you were misled?</label>
+<textarea id="input-type-textarea" name="input-type-textarea"></textarea>
+
+<label for="input-type-textarea" class="reset">Please also describe any harm to you as a result of the school's conduct.</label>
+<textarea id="input-type-textarea" name="input-type-textarea"></textarea>
+
+<div class="usa-grid reset " style="padding:0px;margin-top:20px;">
+   <div class="usa-width-one-half" style="border-right: 2px solid #656565;">
+   	Did any of the issues described above affect your decision to enroll in this school?
+   </div>
+   <div class="usa-width-one-half">
+   	<ul class="h-radio-buttons">
+   	<li>
+   	   <input id="{{pass.text}}" type="radio" ng-model="{{pass.text}}" name="{{pass.text}}" value="yes">
+   	   <label for="{{pass.text}}">Yes</label>
+   	</li>
+   	<li>
+   	   <input id="{{pass.text}}" type="radio" ng-model="{{pass.text}}" name="{{pass.text}}" value="no">
+   	   <label for="{{pass.text}}">No</label>
+   	</li>
+   	
+   	</ul>
+   </div>
+</div>
