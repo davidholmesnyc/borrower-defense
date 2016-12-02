@@ -10,9 +10,9 @@
 				</div>
 				<div class="grey-line"></div>
 				<p class="info">
-					Next, we need some information about the school in question.
+					Next, please tell us about the school and program you attended.
 				</p>
-				<label for="input-type-text">School</label>
+				<label for="input-type-text">School*</label>
 				<input id="input-type-text" name="input-type-text" type="text" value="{{schoolInformation.NAME}}">
 				<form class="usa-form" style='display:none'>
 					<label for="options">Campus</label>
@@ -25,25 +25,25 @@
 				
 				<div class="usa-grid" style="padding:0px">
 					<div class="usa-width-one-third" style="    margin-top: 48px;">
-						<label for="input-type-text">City</label>
+						<label for="input-type-text">City*</label>
 						<input id="input-type-text" name="input-type-text" type="text" value="{{schoolInformation.CITY}}">
 					</div>
 					
 					<div class="usa-width-two-thirds">
 						<form class="usa-form">
-							<label for="options">State</label>
+							<label for="options">State*</label>
 							<select ng-model="myselect.m" ng-init="test = states[0]" ng-options="month as month for month in states">
 								<option value="">{{schoolInformation.ST}}</option>
 							</select>
 						</form>
 					</div>
 				</div>
-				<label for="input-type-text">Current Status at school</label>
+				<label for="input-type-text">Current Status at School*</label>
 				<fieldset class="usa-fieldset-inputs usa-sans" style="margin-top:20px;">
 					<legend class="usa-sr-only">Current Status at school</legend>
 					<ul class="h-radio-buttons">
 						<li>
-							<input id="stanton" type="radio" checked name="historical-figures-2" value="stanton">
+							<input id="stanton" type="radio" name="historical-figures-2" value="stanton">
 							<label for="stanton">Graduated</label>
 						</li>
 						<li>
@@ -61,20 +61,22 @@
 					</ul>
 				</fieldset>
 				<div class="grey-line" style="margin-top:20px;"></div>
-				<label for="input-type-text">Program Name or Major</label>
+				<label for="input-type-text">Program Name or Major*</label>
 				<input id="input-type-text" name="input-type-text" type="text">
+
 				<div>
 					<label for="input-type-text">Credential/Degree Sought</label>
 					<select name="options" id="options">
-						<option value="value1">Select a Degree</option>
-						<option value="value2">Associate</option>
-						<option value="value3">Bachelor</option>
-						<option value="value3">Master</option>
-						<option value="value3">Doctoral</option>
-						<option value="value3">Other</option>
+						<option value="value1">Diploma</option>
+						<option value="value2">Certificate</option>
+						<option value="value3">Associates-AS</option>
+						<option value="value3">Associates-AAS</option>
+						<option value="value3">Bachelors</option>
+						<option value="value3">Masters</option>
 					</select>
 				</div>
-				<label for="input-type-text">Dates of Enrollment</label>
+
+				<label for="input-type-text">Dates of Enrollment*</label>
 				<div class="usa-grid" style="padding:0px">
 					
 					<div class="usa-width-one-fourth">
@@ -125,12 +127,12 @@
 					</div>
 				</div>
 				<p>
-					If you had gaps in your enrollment in a program, <a href="javascript:" style="cursor: pointer" ng-click="add_date=1">add all start and end dates.</a>
+					If you had gaps in your enrollment in a program, add all date ranges you attended. <a href="javascript:" style="cursor: pointer" ng-click="add_date=1">Add more start and end dates.</a>
 				</p>
 				
 				<div class="grey-line"></div>
 				<p>
-					If you attended another program at this school,  <a href="javascript:" style="cursor: pointer">please add information or that program</a>
+					If you attended another program at this school, please add information for that program. <a href="javascript:" style="cursor: pointer">Add another program</a>
 				</p>
 				
 				<div class="layout-box" style="margin-top:20px;">
@@ -139,14 +141,14 @@
 							<a href="javascript:window.history.back()" class="previous">Previous</a>
 						</div>
 						<div class="usa-width-one-half">
-							<a href="#!/other-loan-relief">
+							<a href="#!/supported-documents" >
 								<button class="usa-button-gray">Continue</button>
 							</a>
 						</div>
 					</div>
 				</div>
 				<p>
-					* Continue after entering all required information
+					* Required information 
 				</p>
 			</div>
 		</div>
