@@ -170,7 +170,6 @@ function DemoCtrl($timeout, $q, $log) {
   function selectedItemChange(item) {
     $log.info('Item changed to ' + JSON.stringify(item));
     if (item.value != '') {
-      console.log("test", item.value)
       schoolInformation = item
     }
   }
@@ -179,6 +178,19 @@ function DemoCtrl($timeout, $q, $log) {
    * Build `states` list of key/value pairs
    */
   function loadAll() {
+    var new_object = []
+    for (var i = 0; i < all_colleges.length; i++) {
+
+      new_object.push(
+      {
+        value:all_colleges[i].NAME.toLowerCase(),
+        display:all_colleges[i].NAME,
+        info:all_colleges[i]
+      })
+    }
+    //console.log("new",new_object)
+    return new_object
+    /*
     return colleges.map(function(school) {
       return {
         value: school.NAME.toLowerCase(),
@@ -186,6 +198,7 @@ function DemoCtrl($timeout, $q, $log) {
         info: school
       };
     });
+    */
   }
 
   /**
